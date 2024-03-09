@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background: url(/image/dark-rider-JmVaNyemtN8-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.player {
+    width: 35rem;
+    height: 60rem;
+    background: linear-gradient(to right, #a3818175, #83656575);
+    box-shadow: 0 1rem 5rem rgba(0, 0, 0, 0.4);
+    border-radius: 3rem;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+}
+
+.player .span1 {
+    font-size: 1.8rem;
+    color: #ffffffbb;
+}
+
+.player-top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.player-btn {
+    width: 4rem;
+    height: 4rem;
+    border: 0.2rem solid rgba(255, 255, 255, 0.1);
+    background-color: #2b2c2e;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffffbb;
+    box-shadow: 0.5rem 0.5rem 2rem -0.1rem rgba(0, 0, 0, 0.5),
+        -0.4rem -0.4rem 2rem -0.1rem rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+}
+
+.player-btn:active {
+    transform: translateY(0.2rem);
+}
+
+.player-btn span {
+    font-size: 1.3ren;
+    color: #ffffffbb;
+}
+
+.player-body {
+    width: 100%;
+    height: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.current-song {
+    width: 18rem;
+    height: 18rem;
+    border-radius: 50%;
+    border: 0.5rem solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0.6rem 0.6rem 4rem -0.1rem rgba(0, 0, 0, 0.5),
+        -0.6rem -0.6rem 4rem -0.1rem rgba(255, 255, 255, 0.2);
+    transform: rotateZ(0deg);
+}
+
+.cover {
+    width: 100%;
+    height: 100%;
+    background-color: #101112ad;
+    border-radius: 50%;
+}
+
+.cover img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+@keyframes coverRotate {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.rotate {
+    animation: coverRotate 10s linear infinite;
+}
+
+.cover span {
+    font-family: cursive;
+    position: absolute;
+    display: block;
+}
+
+.song-info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.song-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.song-name {
+    font-size: 2rem;
+    color: #ffffffbb;
+    font-weight: 300;
+    margin-bottom: 8px;
+}
+
+.song-artist {
+    font-size: 1.4rem;
+    color: #ffffffbb;
+}
+
+.song-info i {
+    font-size: 2rem;
+    background: linear-gradient(to right, #3baa7b, #62bc68);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.song-time {
+    width: 100%;
+    height: 0.5rem;
+    background-color: #0c0c0d;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0.2rem 0.2rem 0.2rem rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    position: relative;
+}
+
+.song-progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(to right, #a92121, #ad2e2e);
+    border-radius: 0.5rem;
+}
+
+.time {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.time span {
+    font-size: 1.2rem;
+    color: #ffffffbb;
+}
+
+.controls {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.play-pause {
+    width: 5rem;
+    height: 5rem;
+    background: linear-gradient(to right, #cf1414, #cf1414);
+    box-shadow: 0.5rem 0.5rem 2rem -0.1rem rgba(0, 0, 0, 0.5),
+        -0.8rem -0.8rem 2rem -0.1rem rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+.player-footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+}
+
+.player-footer i {
+    font-size: 1.8rem;
+    color: #ffffffbb;
+}
+
+.player-footer span {
+    font-size: 1.2rem;
+    color: #ffffffbb;
+}
+
+@media(max-width:1075px) {
+    .player {
+        width: 33rem;
+        height: 52rem;
+}
+}
+@media(max-width:350px) {
+.player {
+    width: 30rem;
+}
+}
+
+@media (max-width: 320px){
+.player {
+    width: 27rem;
+}
+}
